@@ -30,4 +30,94 @@ section{padding:70px 0}.pale{background:var(--paper)}h2{font-size:clamp(29px,4vw
 <script>
 let lang='en';document.getElementById('lang').addEventListener('click',()=>{lang=lang==='en'?'rw':'en';document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-rw]').forEach(el=>el.innerHTML=el.dataset[lang]);document.getElementById('lang').textContent=lang==='en'?'Kinyarwanda':'English'});document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('talentForm').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();const message=`BRIDGE OF TALENTS - TALENT REGISTRATION\nName: ${v('name')}\nCategory: ${v('category')}\nPhone: ${v('phone')}\nLocation: ${v('location')}\nAbout talent: ${v('bio')}`;window.open('https://wa.me/250795037210?text='+encodeURIComponent(message),'_blank','noopener')});
+
+<!-- HOW IT WORKS -->
+<section id="how" class="pale">
+  <div class="wrap">
+    <div class="eyebrow"
+         data-en="Simple steps"
+         data-rw="Intambwe zoroshye">Simple steps</div>
+
+    <h2 data-en="How It Works"
+        data-rw="Uko bikora">How It Works</h2>
+
+    <div class="cards">
+      <article class="card">
+        <div class="ico">01</div>
+        <h3 data-en="Register your talent"
+            data-rw="Iyandikishe nk'impano">Register your talent</h3>
+        <p data-en="Complete the registration form with your details and talent category."
+           data-rw="Uzuza ifomu wandikemo amakuru yawe n'icyiciro cy'impano yawe.">
+          Complete the registration form with your details and talent category.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="ico">02</div>
+        <h3 data-en="Connect with our team"
+            data-rw="Huza n'itsinda ryacu">Connect with our team</h3>
+        <p data-en="Send your registration through WhatsApp so our team can review it."
+           data-rw="Ohereza ubusabe bwawe kuri WhatsApp kugira ngo itsinda ryacu ribusuzume.">
+          Send your registration through WhatsApp so our team can review it.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="ico">03</div>
+        <h3 data-en="Explore opportunities"
+            data-rw="Shaka amahirwe">Explore opportunities</h3>
+        <p data-en="Stay connected for possible showcases, events and partnerships. Opportunities are not guaranteed."
+           data-rw="Komeza gukurikirana amahirwe yo kwerekana impano, kwitabira ibirori no gufatanya n'abandi. Amahirwe ntasezeranywa.">
+          Stay connected for possible showcases, events and partnerships. Opportunities are not guaranteed.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FREQUENTLY ASKED QUESTIONS -->
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow"
+         data-en="Need to know"
+         data-rw="Ibyo ukwiye kumenya">Need to know</div>
+
+    <h2 data-en="Frequently Asked Questions"
+        data-rw="Ibibazo bikunze kubazwa">Frequently Asked Questions</h2>
+
+    <div class="cards">
+      <article class="card">
+        <h3 data-en="Is registration free?"
+            data-rw="Kwiyandikisha ni ubuntu?">Is registration free?</h3>
+        <p data-en="Contact our team to confirm any applicable registration requirements before making a payment."
+           data-rw="Banza ubaze itsinda ryacu ibisabwa mu kwiyandikisha mbere yo kwishyura amafaranga ayo ari yo yose.">
+          Contact our team to confirm any applicable registration requirements before making a payment.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 data-en="Will registration guarantee a job or sponsorship?"
+            data-rw="Kwiyandikisha bizampa akazi cyangwa inkunga?">
+          Will registration guarantee a job or sponsorship?
+        </h3>
+        <p data-en="No. Registration does not guarantee selection, sponsorship, employment or paid work."
+           data-rw="Oya. Kwiyandikisha ntibisezeranya gutoranywa, guhabwa inkunga, akazi cyangwa akazi gahemba.">
+          No. Registration does not guarantee selection, sponsorship, employment or paid work.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 data-en="How can an organization partner with us?"
+            data-rw="Ikigo cyafatanya natwe gite?">
+          How can an organization partner with us?
+        </h3>
+        <p data-en="Email bridgeoftalents@gmail.com or contact us on WhatsApp."
+           data-rw="Ohereza email kuri bridgeoftalents@gmail.com cyangwa utwandikire kuri WhatsApp.">
+          Email bridgeoftalents@gmail.com or contact us on WhatsApp.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
 </script></body></html>
