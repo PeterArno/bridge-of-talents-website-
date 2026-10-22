@@ -30,6 +30,7 @@ section{padding:70px 0}.pale{background:var(--paper)}h2{font-size:clamp(29px,4vw
 <script>
 let lang='en';document.getElementById('lang').addEventListener('click',()=>{lang=lang==='en'?'rw':'en';document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-rw]').forEach(el=>el.innerHTML=el.dataset[lang]);document.getElementById('lang').textContent=lang==='en'?'Kinyarwanda':'English'});document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('talentForm').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();const message=`BRIDGE OF TALENTS - TALENT REGISTRATION\nName: ${v('name')}\nCategory: ${v('category')}\nPhone: ${v('phone')}\nLocation: ${v('location')}\nAbout talent: ${v('bio')}`;window.open('https://wa.me/250795037210?text='+encodeURIComponent(message),'_blank','noopener')});
+</script>
 
 <!-- HOW IT WORKS -->
 <section id="how" class="pale">
@@ -120,4 +121,4 @@ document.getElementById('talentForm').addEventListener('submit',e=>{e.preventDef
   </div>
 </section>
 
-</script></body></html>
+</body></html>
