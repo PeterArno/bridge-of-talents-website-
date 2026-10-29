@@ -120,5 +120,108 @@ document.getElementById('talentForm').addEventListener('submit',e=>{e.preventDef
     </div>
   </div>
 </section>
+  
+<!-- BRIDGE OF TALENTS TICKET SYSTEM -->
+<section id="ticket-booking" style="background:#080808;color:#fff;padding:45px 18px;">
+  <div style="max-width:760px;margin:auto;">
+    <div style="text-align:center;">
+      <p style="color:#d4af37;letter-spacing:2px;">BRIDGE OF TALENTS COMPANY LTD</p>
+      <h2 style="color:#d4af37;">BRIDGE OF TALENTS PERFORMANCE 2026</h2>
+      <p>Wednesday, 23 December 2026</p>
+      <p>Ligue pour la Lecture de la Bible au Rwanda</p>
+      <p>Near the Office of the President, Kacyiru, Kigali</p>
+    </div>
+
+    <hr style="border-color:#66501c;margin:25px 0;">
+
+    <h3 style="color:#d4af37;">1. Choose Your Ticket / Hitamo Itike</h3>
+
+    <form id="botTicketForm">
+      <label for="botTicketName">Full Name / Amazina yose</label>
+      <input id="botTicketName" required
+        autocomplete="name"
+        placeholder="Enter your full name"
+        style="width:100%;padding:13px;margin:8px 0 18px;box-sizing:border-box;">
+
+      <label for="botTicketPhone">Phone Number / Telefoni</label>
+      <input id="botTicketPhone" required
+        type="tel" autocomplete="tel"
+        placeholder="+250 7XX XXX XXX"
+        style="width:100%;padding:13px;margin:8px 0 18px;box-sizing:border-box;">
+
+      <label for="botTicketType">Ticket Type / Ubwoko bw'itike</label>
+      <select id="botTicketType" required
+        style="width:100%;padding:13px;margin:8px 0 18px;box-sizing:border-box;">
+        <option value="">Choose a ticket / Hitamo</option>
+        <option value="REGULAR">REGULAR — 2,000 RWF</option>
+        <option value="VIP">VIP — 3,000 RWF</option>
+        <option value="VVIP">VVIP — 5,000 RWF</option>
+      </select>
+
+      <div style="background:#171717;border:1px solid #d4af37;border-radius:10px;padding:18px;margin:10px 0 20px;">
+        <h3 style="color:#d4af37;margin-top:0;">2. Pay with MTN MoMo</h3>
+        <p>Follow the payment instructions provided by the organizer:</p>
+        <p><strong style="color:#f3d477;font-size:20px;">*182*8*1*58866#</strong></p>
+        <p>Open your phone dialer, enter the code and follow the instructions displayed by MTN MoMo. Confirm the recipient name and amount before approving payment.</p>
+        <p>Fungura aho uhamagarira, andikamo kode, ukurikize amabwiriza ya MTN MoMo. Banza urebe amazina y'uwishyurwa n'amafaranga mbere yo kwemeza.</p>
+      </div>
+
+      <label for="botTicketReference">MoMo Transaction Reference / Nimero y'ubwishyu (niba warishyuye)</label>
+      <input id="botTicketReference"
+        placeholder="Transaction reference"
+        style="width:100%;padding:13px;margin:8px 0 18px;box-sizing:border-box;">
+
+      <button type="submit"
+        style="width:100%;padding:15px;background:#d4af37;color:#080808;font-weight:bold;border:0;border-radius:7px;font-size:16px;cursor:pointer;">
+        SEND TICKET REQUEST / OHEREZA UBUSABE
+      </button>
+    </form>
+
+    <div style="margin-top:22px;font-size:14px;color:#ddd;">
+      <h3 style="color:#d4af37;">Important / Icyitonderwa</h3>
+      <p>Your request is not a ticket. Bridge of Talents must verify that your payment has arrived before confirming your ticket.</p>
+      <p>Ubusabe si itike yemewe. Bridge of Talents igomba kubanza kugenzura ko amafaranga yageze kuri konti mbere yo kwemeza itike yawe.</p>
+      <p>Never share your MoMo PIN or password.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+document.getElementById('botTicketForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('botTicketName').value.trim();
+  const phone = document.getElementById('botTicketPhone').value.trim();
+  const type = document.getElementById('botTicketType').value;
+  const reference = document.getElementById('botTicketReference').value.trim();
+
+  const prices = {
+    REGULAR: 2000,
+    VIP: 3000,
+    VVIP: 5000
+  };
+
+  if (!name || !phone || !type) {
+    alert('Please complete all required fields.');
+    return;
+  }
+
+  const message =
+    'BRIDGE OF TALENTS PERFORMANCE 2026 - TICKET REQUEST\n' +
+    'Name: ' + name + '\n' +
+    'Phone: ' + phone + '\n' +
+    'Ticket: ' + type + '\n' +
+    'Amount: ' + prices[type] + ' RWF\n' +
+    'MoMo code: *182*8*1*58866#\n' +
+    'Transaction reference: ' + (reference || 'Not provided') + '\n' +
+    'Please verify my payment before issuing my ticket.';
+
+  const whatsappURL =
+    'https://wa.me/250795037210?text=' + encodeURIComponent(message);
+
+  window.open(whatsappURL, '_blank', 'noopener');
+});
+</script>
+
 
 </body></html>
